@@ -26,26 +26,26 @@ Enemy.prototype.render = function() {
 
 var Player = function() {
     this.sprite = 'images/char-boy.png';
-    this.x = 200;
-    this.y = 435;
+    this.x = 202;
+    this.y = 415;
     this.render = function() {
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     };
     this.update = function() {
         this.x < 404 ? this.x = this.x : this.x = 404;
         this.x > 0 ? this.x = this.x : this.x = 0;
-        this.y < 435 ? this.y = this.y : this.y = 435;
+        this.y < 415 ? this.y = this.y : this.y = 415;
         this.y > 0 ? this.y = this.y : this.y = 0;
     };
     this.handleInput = function(keydown) {
         if (keydown === 'up') {
-            this.y = this.y - 5;
+            this.y = this.y - 83;
         } else if (keydown === 'left') {
-            this.x = this.x - 5;
+            this.x = this.x - 101;
         } else if (keydown === 'right') {
-            this.x = this.x + 5;
+            this.x = this.x + 101;
         } else if (keydown === 'down') {
-            this.y = this.y + 5;
+            this.y = this.y + 83;
         }
     };
 };

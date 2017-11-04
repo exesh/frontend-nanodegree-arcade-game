@@ -92,7 +92,7 @@ var Engine = (function(global) {
                     alert("End Game! Start again!");
                     reset();
                 } else {
-                    if(player.y < 60) {
+                    if(player.y < 83) {
                         alert("You Win!")
                         reset();
                     }
